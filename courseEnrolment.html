@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Enrollment</title>s
+    
+    <link rel="stylesheet" href="parent.css">
+</head>
+<body>
+  
+        <header>
+            <nav>
+                <div id="navbar">
+                    <div id="navbar-right">
+                        <img src="Pic/TK.png" alt="logo" width="100" height="100">
+                        <a href="index.html">Home</a>
+                        <a href="Courses.html">Courses</a>
+                        <a href="Toutors.html">Toutors</a>
+                        <a href="Admin.html">Administrator</a>
+                        <a href="parent.html">Parent</a>
+                        <a href="Aboutus.html"> AboutUs</a>
+                    </div>
+                </div>
+               
+            </nav>
+        </header>
+   
+
+    <main>
+        <h1>Course Enrollment</h1>
+        <nav>
+            <a href="index.html"> Home </a> / <a href="parent.html"> Parent </a> / <a href="courseEnrolment.html"> Course Enrollment</a>
+        </nav>
+        <section id="course-enrollment-form">
+            <h2 class="fontt"><strong>Choose your kid:</strong></h2>
+            <form action="parent.html" method="get">
+                <div class="form-group1-kid">
+                    <div class="select-wrapper-kid">
+                        <select id="kid-select" name="kid">
+                            <option value="kid1">Fahad</option>
+                            <option value="kid2">Tala</option>
+                            <option value="kid3">Shaden</option>
+                            <option value="kid4">Yzeed</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="courseFilters">
+                    <span class="fontt"><strong>Filter by Tutor or Prerequisite:</strong></span>
+                </label>
+                <div class="choice">
+                    <select id="courseFilters" name="filter">
+                        <optgroup label="By Tutor">
+                            <option value="tutor1">Mohammed</option>
+                            <option value="tutor2">Norah</option>
+                            <option value="tutor3">Abeer</option>
+                            <option value="tutor4">Rehab</option>
+                            <!-- Add more tutor options as needed -->
+                        </optgroup>
+                        <optgroup label="By Prerequisite Course">
+                            <option value="prerequisite1">Java</option>
+                            <option value="prerequisite2">Scratch</option>
+                            <option value="prerequisite3">Web</option>
+                            <option value="prerequisite4">Java Script</option>
+                            <option value="prerequisite5">Python</option>
+                            <option value="prerequisite6">SQL</option>
+                            <!-- Add more prerequisite options as needed -->
+                        </optgroup>
+                    </select>
+                </div>
+                <fieldset>
+                    <legend><h3>Available Courses:</h3></legend>
+                    <div class="course-label">
+                        <label for="course1">
+                            <input type="checkbox" id="course1" name="courses[]" value="course1">
+                            <img src="image/java.jpg" alt="java logo" class="size-image">
+                            Java
+                        </label>
+                    </div>
+                    <div class="course-label">
+                        <label for="course2">
+                            <input type="checkbox" id="course2" name="courses[]" value="course2">
+                            <img src="image/Scratch.jpg" alt="scratch logo" class="size-image">
+                            Scratch
+                        </label>
+                    </div>
+                    <div class="course-label">
+                        <label for="course3">
+                            <input type="checkbox" id="course3" name="courses[]" value="course3">
+                            <img src="image/web.jpg" alt="web logo" class="size-image">
+                            Web
+                        </label>
+                    </div>
+                    <div class="course-label">
+                        <label for="course4">
+                            <input type="checkbox" id="course4" name="courses[]" value="course4">
+                            <img src="image/JS.jpg" alt="JS logo" class="size-image">
+                            Java Script
+                        </label>
+                    </div>
+                    <div class="course-label">
+                        <label for="course5">
+                            <input type="checkbox" id="course5" name="courses[]" value="course5">
+                            <img src="image/python.jpg" alt="python logo" class="size-image">
+                            Python
+                        </label>
+                    </div>
+                    <div class="course-label">
+                        <label for="course6">
+                            <input type="checkbox" id="course6" name="courses[]" value="course6">
+                            <img src="image/SQL.jpg" alt="SQL logo" class="size-image">
+                            SQL
+                        </label>
+                    </div>
+                    <!-- Add more course options as needed -->
+                </fieldset>
+                <button class="button2" onclick="showAlert()"><span class="fontt">Submit</span></button>
+            </form>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <div class="footer-content">
+            <h3>Contact Us</h3>
+            <p>Riyadh, Saudi Arabia <br> Contact@TechKiddo.com</p>
+        </div>
+        <div class="footer-bottom">
+            <p> <em>©2023 TechKiddo</em></p>
+        </div>
+    </footer>
+</body>
+</html>
+
