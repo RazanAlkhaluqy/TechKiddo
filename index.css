@@ -1,16 +1,9 @@
 
 
- 
 body {
   width: 100%;
   margin: 0;
   padding: 0;
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px; /* Set a maximum width for larger screens */
-  margin: 0 auto; /* Center the container */
 }
 /**********/
 img {
@@ -21,25 +14,20 @@ img {
 
 /* For mobile devices */
 @media (max-width: 767px) {
-  /* Your styles for small screens gon here */
 }
 
 /* For tablets and larger devices */
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* Your styles for medium screens go here */
 }
 
 /* For larger devices like laptops and desktops */
 @media (min-width: 1024px) {
-  /* Your styles for large screens go here */
 }
 /****************/
 
-/* Your existing styles */
-
 /* Navigation Styles */
 
-
+/*****************/
 .nav-list {
   list-style: none;
   margin: 0;
@@ -49,7 +37,7 @@ img {
 
 .nav-list li {
   margin-right: 20px;
-}
+}  
 
 /* Style the mobile menu icon */
 .mobile-menu-icon {
@@ -63,7 +51,7 @@ img {
       display: none; /* Hide the regular navigation on small screens */
       flex-direction: column;
       position: absolute;
-      top: 60px; /* Adjust as needed */
+      top: 60px; /
       left: 0;
       background-color: #f9f9f9;
       width: 100%;
@@ -78,11 +66,11 @@ img {
       margin: 0;
       text-align: center;
       padding: 10px;
-      border-bottom: 1px solid #ddd; /* Add a border between menu items */
+      border-bottom: 1px solid #ddd; 
   }
 
   .mobile-menu-icon {
-      display: block; /* Show the mobile menu icon on small screens */
+      display: block; 
   }
 }
 /**************/
@@ -93,7 +81,7 @@ img {
             margin-right: 20%;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30%; /* تغيير المسافة بين العناصر حسب متطلباتك */
+            gap: 30%; 
         }
 
         .grid-item {
@@ -102,7 +90,7 @@ img {
             align-items: center;
             padding: 1rem;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            background-color: #ffffff; /* لون خلفية كل كورس */
+            background-color: #ffffff;  
             text-align: center;
             text-transform: uppercase;
             border-radius:30%;
@@ -110,8 +98,8 @@ img {
         }
 
         .grid-item img { 
-            max-width: 100px; /* تحديد العرض الأقصى للصورة */
-            max-height: 100px; /* تحديد الارتفاع الأقصى للصورة */
+            max-width: 100px; 
+            max-height: 100px; 
         }
 
         
@@ -238,7 +226,7 @@ a:visited{
 .person {
   text-align: center;
   display: flex;
-  flex-direction: column; /* يجعل النص تحت الصورة */
+  flex-direction: column; 
   align-items: center;
   margin: 1%;
   display: inline-flex;
@@ -255,7 +243,7 @@ a:visited{
 
 .person p {
   margin-top: 1%;
-  font-size: 20px; /* حجم الخط حسب الحاجة */
+  font-size: 20px; 
 }
 
 section {
