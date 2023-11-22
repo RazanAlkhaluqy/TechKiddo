@@ -21,7 +21,7 @@ img {
 
 /* For mobile devices */
 @media (max-width: 767px) {
-  /* Your styles for small screens go here */
+  /* Your styles for small screens gon here */
 }
 
 /* For tablets and larger devices */
@@ -33,8 +33,59 @@ img {
 @media (min-width: 1024px) {
   /* Your styles for large screens go here */
 }
+/****************/
+
+/* Your existing styles */
+
+/* Navigation Styles */
 
 
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-list li {
+  margin-right: 20px;
+}
+
+/* Style the mobile menu icon */
+.mobile-menu-icon {
+  display: none; /* Hide by default on larger screens */
+  cursor: pointer;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 767px) {
+  .nav-list {
+      display: none; /* Hide the regular navigation on small screens */
+      flex-direction: column;
+      position: absolute;
+      top: 60px; /* Adjust as needed */
+      left: 0;
+      background-color: #f9f9f9;
+      width: 100%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-list.show {
+      display: flex;
+  }
+
+  .nav-list li {
+      margin: 0;
+      text-align: center;
+      padding: 10px;
+      border-bottom: 1px solid #ddd; /* Add a border between menu items */
+  }
+
+  .mobile-menu-icon {
+      display: block; /* Show the mobile menu icon on small screens */
+  }
+}
+/**************/
 
 
         .grid {
