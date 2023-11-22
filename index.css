@@ -114,6 +114,10 @@ img {
             max-height: 100px; /* تحديد الارتفاع الأقصى للصورة */
         }
 
+        
+    abbr { color:  rgb(33, 128, 53);
+      text-decoration: none;
+  } 
         footer{
     
     background: #ffffff;
