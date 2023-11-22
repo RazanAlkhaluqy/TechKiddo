@@ -1,5 +1,40 @@
 
 
+ 
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* Set a maximum width for larger screens */
+  margin: 0 auto; /* Center the container */
+}
+/**********/
+img {
+  max-width: 100%;
+  height: auto;
+}
+/***********/
+
+/* For mobile devices */
+@media (max-width: 767px) {
+  /* Your styles for small screens go here */
+}
+
+/* For tablets and larger devices */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Your styles for medium screens go here */
+}
+
+/* For larger devices like laptops and desktops */
+@media (min-width: 1024px) {
+  /* Your styles for large screens go here */
+}
+
+
 
 
         .grid {
