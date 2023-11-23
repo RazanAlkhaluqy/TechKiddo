@@ -1,6 +1,7 @@
 
-
-body                                {
-    background-color: #b7b3b3;
-    color: rgb(60, 90, 154);
+/* Dark Mode */
+body   {
+    background-color: #1e272e;
+    color: rgb(112, 112, 112);
+    font-family: 'Courier New', Courier, monospace;
 }
