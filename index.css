@@ -33,10 +33,27 @@ img {
   margin: 0;
   padding: 0;
   display: flex;
+  
+
 }
 
-.nav-list li {
-  margin-right: 20px;
+
+.nav-list li  {
+
+  color: #020202;
+  float: left;
+  text-align:left;
+  padding: 4%;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 4%;
+  border-radius:4%;
+  margin-left:1%;
+  font-size:medium;
+  height: 50%;
+  padding:5% 3%;
+
 }  
 
 /* Style the mobile menu icon */
@@ -51,23 +68,32 @@ img {
       display: none; /* Hide the regular navigation on small screens */
       flex-direction: column;
       position: absolute;
-      top: 60px; /
+      top: 60px; 
       left: 0;
-      background-color: #f9f9f9;
-      width: 100%;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+      width: 70%;
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
   }
 
   .nav-list.show {
       display: flex;
   }
 
-  .nav-list li {
-      margin: 0;
-      text-align: center;
-      padding: 10px;
-      border-bottom: 1px solid #ddd; 
-  }
+  .nav-list li a{
+    color: #020202;
+    float: left;
+    text-align:left;
+    padding: 4%;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 4%;
+    border-radius:4%;
+    margin-left:1%;
+    font-size:medium;
+    height: 50%;
+    padding:5% 3%;
+  }   
 
   .mobile-menu-icon {
       display: block; 
@@ -159,7 +185,7 @@ z-index: 100;
   
 }
  
-#navbar a {
+#navbar li a {
     color: #020202;
   float: left;
   text-align:left;
@@ -185,7 +211,7 @@ z-index: 100;
   transition: 0.4s;
 }
  
-#navbar a:hover {
+#navbar li a:hover {
   background-color: #afe4b4e4;;
 }
  
@@ -200,7 +226,7 @@ z-index: 100;
  
 @media screen and (max-width: 100%) {
    
-  #navbar a {
+  #navbar li a {
     float: none;
     display: block;
     text-align: left;
