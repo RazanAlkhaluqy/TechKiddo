@@ -1,7 +1,9 @@
+
 /* Light Mode */
 
 
 body {
-    background-color: rgb(44, 162, 29);
-    color: red;
+    background-color:  #b1e6b7d4;
+    color: rgb(7, 88, 0);
+    font-family: 'Times New Roman', Times, serif;
 }
