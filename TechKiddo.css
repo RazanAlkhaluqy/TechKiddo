@@ -1,3 +1,109 @@
+
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  /**********/
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  /***********/
+  
+  /* For mobile devices */
+  @media (max-width: 767px) {
+  }
+  
+  /* For tablets and larger devices */
+  @media (min-width: 768px) and (max-width: 1023px) {
+  }
+  
+  /* For larger devices like laptops and desktops */
+  @media (min-width: 1024px) {
+  }
+  /****************/
+  
+  /* Navigation Styles */
+  
+  /*****************/
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+  
+  }
+  
+  
+  .nav-list li  {
+  
+    color: #020202;
+    float: left;
+    text-align:left;
+    padding: 4%;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 4%;
+    border-radius:4%;
+    margin-left:1%;
+    font-size:medium;
+    height: 50%;
+    padding:5% 3%;
+  
+  }  
+  
+  /* Style the mobile menu icon */
+  .mobile-menu-icon {
+    display: none; /* Hide by default on larger screens */
+    cursor: pointer;
+  }
+  
+  /* Media Query for Small Screens */
+  @media (max-width: 767px) {
+    .nav-list {
+        display: none; /* Hide the regular navigation on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        background-color: #ffffff;
+        width: 70%;
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    }
+  
+    .nav-list.show {
+        display: flex;
+    }
+  
+    .nav-list li a{
+      color: #020202;
+      float: left;
+      text-align:left;
+      padding: 4%;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      line-height: 4%;
+      border-radius:4%;
+      margin-left:1%;
+      font-size:medium;
+      height: 50%;
+      padding:5% 3%;
+    }   
+  
+    .mobile-menu-icon {
+        display: block; 
+    }
+  }
+  /**************/
+
+
+
+
 @media screen and (max-width: 768px) {
 }
 
