@@ -8,10 +8,11 @@
         mobileMenuIcon.addEventListener('click', function () {
             navList.classList.toggle('show');
         });
+    });
         document.addEventListener('DOMContentLoaded', function () {
             const customizeButton = document.getElementById('customize-button');
             const themeStylesheet1 = document.getElementById('theme-stylesheet');
-            const themeStylesheet2 = document.querySelector('link[href="styles-theme2.css"]');
+            const themeStylesheet2 = document.querySelector('link[href="theme2.css"]');
         
             customizeButton.addEventListener('click', function () {
                 // Toggle between themes
@@ -28,5 +29,5 @@
                 }
             });
         });
-    });  
+     
         
