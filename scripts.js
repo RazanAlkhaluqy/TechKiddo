@@ -8,36 +8,25 @@
         mobileMenuIcon.addEventListener('click', function () {
             navList.classList.toggle('show');
         });
-    
-        const customizeButton = document.getElementById('customize-button');
-        let isDarkMode = localStorage.getItem('isDarkMode') === 'true';
-    
-        // Function to toggle theme
-        function toggleTheme() {
+        document.addEventListener('DOMContentLoaded', function () {
+            const customizeButton = document.getElementById('customize-button');
             const themeStylesheet1 = document.getElementById('theme-stylesheet');
-            const themeStylesheet2 = document.querySelector('link[href="theme2.css"]');
-    
-            if (isDarkMode) {
-                themeStylesheet1.removeAttribute('disabled');
-                themeStylesheet2.setAttribute('disabled', 'true');
-            } else {
-                themeStylesheet1.setAttribute('disabled', 'true');
-                themeStylesheet2.removeAttribute('disabled');
-            }
-    
-            // Toggle Dark Mode / Light Mode text
-            isDarkMode = !isDarkMode;
-    
-            // Update the button text on all pages
-            customizeButton.textContent = isDarkMode ? 'Dark Mode' : 'Light Mode';
-    
-            // Save the user's preference to localStorage
-            localStorage.setItem('isDarkMode', isDarkMode.toString());
-        }
-    
-        // Set initial theme based on user's preference
-        toggleTheme();
-    
-        customizeButton.addEventListener('click', toggleTheme);
-    });
-    
+            const themeStylesheet2 = document.querySelector('link[href="styles-theme2.css"]');
+        
+            customizeButton.addEventListener('click', function () {
+                // Toggle between themes
+                if (themeStylesheet1.disabled) {
+                    themeStylesheet1.removeAttribute('disabled');
+                    themeStylesheet2.setAttribute('disabled', 'true');
+                    document.body.classList.remove('theme2');
+                    document.body.classList.add('theme1');
+                } else {
+                    themeStylesheet1.setAttribute('disabled', 'true');
+                    themeStylesheet2.removeAttribute('disabled');
+                    document.body.classList.remove('theme1');
+                    document.body.classList.add('theme2');
+                }
+            });
+        });
+    });  
+        
