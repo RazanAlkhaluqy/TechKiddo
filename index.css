@@ -4,19 +4,19 @@
   right: 20px;
 }
 
-/* Dark Mode */
+/* Dark Mode */  /**
 body.theme1 #customize-button {
-  background-color: #2c3e50; /* Dark Mode background color for the button */
-  color: #ffffff; /* Dark Mode text color for the button */
+  background-color: #2c3e50; 
+  color: #ffffff; 
   font-family: 'Arial', sans-serif;
-}
+}  **/
 
-/* Light Mode */
+/* Light Mode */ /**
 body.theme2 #customize-button {
-  background-color: #ffffff; /* Light Mode background color for the button */
-  color: rgb(92, 163, 92); /* Light Mode text color for the button */
+  background-color: #ffffff; 
+  color: rgb(92, 163, 92); 
   font-family: 'Arial', sans-serif;
-}
+} * */
 
 body {
   width: 100%;
