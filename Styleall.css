@@ -322,7 +322,7 @@ footer{
 #navbar {
     background-color: #ffffff;
     background-size: 100%;
-    position: fixed;
+    position: relative;
     width:100%;
     padding: 5% 5%;
     height: 25%;

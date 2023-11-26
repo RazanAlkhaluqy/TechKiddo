@@ -63,23 +63,56 @@
     </div>
 
 
-    <hr>
-    <h2>Our Tutors</h2>
+    <nav>
+        <pre>
+            <a href="index.html">Home</a> / <a href="parent.html">Tutors</a>
+        </pre>
+    </nav>
+    <br> <br>
+
     <p>
         <select id="sortSelect"  name="Sort">
             <option value="A-Z">A-Z</option>
         <option value="Z-A">Z-A</option>
         </select>
     </p>
-    <hr>
+    <br>
 
+    <script>
+        document.getElementById('sortSelect').addEventListener('change', function () {
+            var sortOrder = this.value;
+            var tutorList = document.querySelector('.toutList');
+    
+            var tutors = Array.from(tutorList.children);
+            tutors.sort(function (a, b) {
+                var nameA = a.querySelector('h3').textContent.toUpperCase();
+                var nameB = b.querySelector('h3').textContent.toUpperCase();
+    
+                if (sortOrder === 'A-Z') {
+                    return nameA.localeCompare(nameB);
+                } else if (sortOrder === 'Z-A') {
+                    return nameB.localeCompare(nameA);
+                }
+            });
+    
+            tutorList.innerHTML = '';
+            tutors.forEach(function (tutor) {
+                tutorList.appendChild(tutor);
+            });
+        });
+    </script>
+    
+
+    <hr>
+    <h2>Our Tutors</h2>
+    <hr>
 
     <main>
         <ul class="toutList">
             <!-- Tutor 1 -->
             <li>
                 <div class="tout">
-                    <img src="pic/T1.png" alt="Tutor1 pic" width="90" height="60">
+                    <img src="pic/T1.png" alt="Tutor1 pic" width="90" height="90">
                     <br>
                     <h3>Abeer</h3>
                     
@@ -101,11 +134,11 @@
             <!-- Tutor 2 -->
             <li>
                 <div class="tout">
-                    <img src="pic/T2.png" alt="Tutor2 pic" width="90" height="60">
+                    <img src="pic/T2.png" alt="Tutor2 pic" width="90" height="90">
                     <br>
                     <h3>Mohammed</h3>
                     <br>
-                    <p>Programming Languages</p>
+                    <p>Java</p>
                     <div class="stars">
                      
 
@@ -126,7 +159,7 @@
             <!-- Tutor 3 -->
             <li>
                 <div class="tout">
-                    <img src="pic/T3.png" alt="Tutor pic" width="90" height="60">
+                    <img src="pic/T3.png" alt="Tutor pic" width="90" height="90">
                     <br>
                     <h3>Nourah</h3>
                     <br>
@@ -147,7 +180,7 @@
             <!-- Tutor 4 -->
             <li>
                 <div class="tout">
-                    <img src="pic/T4.png" alt="Tutor pic" width="90" height="60">
+                    <img src="pic/T4.png" alt="Tutor pic" width="90" height="90">
                     <br>
                     <h3>Rehab</h3>
                     <br>
@@ -158,13 +191,57 @@
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star checked"></span>
                     </div>
                   
                     <br>
                     <a href="mailto:Rehab@TK.com"><span class="button">Email</span></a>
                 </div>
             </li>
+
+ <!-- Tutor 5 -->
+ <li>
+    <div class="tout">
+        <img src="pic/T5.png" alt="Tutor pic" width="90" height="90">
+        <br>
+        <h3>Amani</h3>
+        <br>
+        <p>Python</p>
+        <div class="stars">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        </div>
+      
+        <br>
+        <a href="mailto:Amani@TK.com"><span class="button">Email</span></a>
+    </div>
+</li>
+ <!-- Tutor 6 -->
+ <li>
+    <div class="tout">
+        <img src="pic/T6.png" alt="Tutor pic" width="90" height="90">
+        <br>
+        <h3>Maha</h3>
+        <br>
+        <p>java Script</p>
+        <div class="stars">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star "></span>
+        <span class="fa fa-star"></span>
+        </div>
+      
+        <br>
+        <a href="mailto:Maha@TK.com"><span class="button">Email</span></a>
+    </div>
+</li>
+
         </ul>
     </main>
 
