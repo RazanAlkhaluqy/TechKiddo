@@ -96,6 +96,45 @@
         <div class="footer-bottom">
             <p><em>©2023 TechKiddo</em></p>
         </div>
+		<script>
+		document.addEventListener('DOMContentLoaded', function () {
+    // Select all star-rating elements
+    var starRatingElements = document.querySelectorAll('.star-rating');
+
+    // Add click event listener to each star-rating element
+    starRatingElements.forEach(function (starRatingElement) {
+        var stars = starRatingElement.querySelectorAll('.star');
+
+        stars.forEach(function (star) {
+            star.addEventListener('click', function () {
+                var rating = this.getAttribute('data-rating');
+                var question = starRatingElement.getAttribute('data-question');
+                var selectedRatingInput = document.querySelector('input[name="rating' + question + '"]');
+
+                // Update the selected rating input value
+                selectedRatingInput.value = rating;
+
+                // Update the appearance of the stars
+                stars.forEach(function (s) {
+                    if (s.getAttribute('data-rating') <= rating) {
+                        s.classList.add('selected');
+                    } else {
+                        s.classList.remove('selected');
+                    }
+                });
+            });
+        });
+    });
+
+    // Form validation and submission function
+    window.validateAndSubmit = function () {
+        // Add any additional validation logic here if needed
+
+        // Submit the form (You can replace 'evaluationForm' with the actual form ID)
+        document.getElementById('evaluationForm').submit();
+    };
+});
+</script>
     </footer>
 </body>
 </html>
