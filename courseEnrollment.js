@@ -1,3 +1,4 @@
+// course_enrollment.js
 
 document.addEventListener('DOMContentLoaded', function () {
     // Other initialization code for course enrollment
@@ -11,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
         courseEnrollmentElement.textContent = "Enroll for courses for " + childName;
     }
 });
-
 
 document.addEventListener('DOMContentLoaded', function () {
     // Retrieve children's names from local storage

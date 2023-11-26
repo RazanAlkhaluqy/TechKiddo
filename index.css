@@ -223,7 +223,9 @@ z-index: 100;
  
 #navbar-right {
     display: flex;
-  float: left;
+    margin-left: 10%;
+    margin-top: -5% ;
+  /*float: left; */
   flex-direction: row;
   justify-content: flex-start;
   flex:0;
