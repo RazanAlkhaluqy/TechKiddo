@@ -66,6 +66,8 @@ img {
 .mobile-menu-icon {
   display: none; /* Hide by default on larger screens */
   cursor: pointer;
+  margin-left: 5%;
+  top: -20%;
 }
 
 /* Media Query for Small Screens */

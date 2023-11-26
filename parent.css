@@ -27,6 +27,142 @@ img {
 
 /* Navigation Styles */
 
+/********************/
+
+.nav-list.show {
+  display: flex;
+}
+
+.nav-list li a{
+color: #020202;
+float: left;
+text-align:left;
+padding: 4%;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+line-height: 4%;
+border-radius:4%;
+margin-left:1%;
+font-size:medium;
+height: 50%;
+padding:5% 3%;
+}   
+
+.mobile-menu-icon {
+  display: block; 
+}
+
+#navbar {
+  background-color: #ffffff;
+  background-size: 100%;
+  position: relative;
+  width:100%;
+  padding: 1% 1%;
+  height: 25%;
+  top: 0;
+  z-index: 100;
+    
+    
+  }
+   
+  #navbar li a {
+      color: #020202;
+    float: left;
+    text-align:left;
+    padding: 4%;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 4%;
+    border-radius:4%;
+    margin-left:1%;
+    font-size:medium;
+    height: 50%;
+    padding:5% 3%;
+  
+  }
+   
+   #logo {
+   height: 20%;
+   width: 20%;
+   top: 0;
+   left: 0;
+    font-weight: bold;
+    transition: 0.4s;
+  }
+   
+  #navbar li a:hover {
+    background-color: #afe4b4e4;;
+  }
+   
+  #navbar-right {
+      display: flex;
+      margin-left: 10%;
+      margin-top: -5% ;
+    /*float: left; */
+    flex-direction: row;
+    justify-content: flex-start;
+    flex:0;
+  
+  }
+   
+  @media screen and (max-width: 100%) {
+     
+    #navbar li a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    #navbar-right {
+      float: none;
+    }
+  }
+  
+  a:visited{
+      background-color: #bc5f78;;
+  }   
+  
+
+
+
+/*****************/
+
+
+
+
+
+
+/* Media Query for Small Screens */
+@media (max-width: 767px) {
+  .nav-list {
+      display: none; /* Hide the regular navigation on small screens */
+      flex-direction: column;
+      position: absolute;
+      top: 60px; 
+      left: 0;
+      background-color: #ffffff;
+      width: 70%;
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  }
+}
+
+
+/* For mobile devices */
+@media (max-width: 767px) {
+}
+
+/* For tablets and larger devices */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* For larger devices like laptops and desktops */
+@media (min-width: 1024px) {
+}
+/****************/
+
+/* Navigation Styles */
+
 /*****************/
 .nav-list {
   list-style: none;
@@ -61,46 +197,6 @@ img {
   display: none; /* Hide by default on larger screens */
   cursor: pointer;
 }
-
-/* Media Query for Small Screens */
-@media (max-width: 767px) {
-  .nav-list {
-      display: none; /* Hide the regular navigation on small screens */
-      flex-direction: column;
-      position: absolute;
-      top: 60px; 
-      left: 0;
-      background-color: #ffffff;
-      width: 70%;
-      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
-  }
-
-  .nav-list.show {
-      display: flex;
-  }
-
-  .nav-list li a{
-    color: #020202;
-    float: left;
-    text-align:left;
-    padding: 4%;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    line-height: 4%;
-    border-radius:4%;
-    margin-left:1%;
-    font-size:medium;
-    height: 50%;
-    padding:5% 3%;
-  }   
-
-  .mobile-menu-icon {
-      display: block; 
-  }
-}
-/**************/
-
 
 .image-text-container {
     display: flex;
@@ -481,70 +577,3 @@ footer{
 	margin-left:1em;
 }
 
-
-#navbar {
-    background-color: #ffffff;
-    background-size: 100%;
-    position: relative;
-    width:100%;
-    padding: 5% 5%;
-    height: 25%;
-      top: 0;
-      z-index: 100;
-      
-      
-    }
-     
-    #navbar  a {
-        color: #020202;
-      float: left;
-      text-align:left;
-      padding: 4%;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: bold;
-      line-height: 4%;
-      border-radius:4%;
-      margin-left:1%;
-      font-size:medium;
-    
-    }
-     
-     #logo {
-     height: 20%;
-     width: 20%;
-     top: 0;
-     left: 0;
-      font-weight: bold;
-      transition: 0.4s;
-    }
-     
-    #navbar a:hover {
-      background-color: #afe4b4e4;;
-    }
-     
-    #navbar-right {
-        display: flex;
-      float: left;
-      flex-direction: row;
-      justify-content: flex-start;
-      flex:0;
-    
-    }
-     
-    @media screen and (max-width: 100%) {
-       
-      #navbar a {
-        float: none;
-        display: block;
-        text-align: left;
-      }
-      #navbar-right {
-        float: none;
-      }
-    }
-    
-    a:visited{
-        background-color: #bc5f78;;
-    }
-    
