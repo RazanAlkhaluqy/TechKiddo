@@ -50,9 +50,35 @@
     <br>
     <br>
     <br>
+    <h4 id="Date">Date: </h4>
     <br>
-    <br>
-    <br>
+
+
+<script id="date">
+    function updateLiveDate() {
+        var currentDate = new Date();
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        var formattedDate = currentDate.toLocaleDateString('en-US', options);
+        document.getElementById('Date').textContent = 'Date: ' + formattedDate;
+
+        // Calculate the start date of the current week (assuming the week starts on Sunday)
+        var firstDayOfWeek = new Date(currentDate);
+        firstDayOfWeek.setDate(currentDate.getDate() - currentDate.getDay());
+
+        var weekOptions = { weekday: 'long', month: 'long', day: 'numeric' };
+        var formattedWeekStartDate = firstDayOfWeek.toLocaleDateString('en-US', weekOptions);
+
+        // Display the current week's start date
+        document.getElementById('WeekStartDate').textContent = 'Current Week\'s Start Date: ' + formattedWeekStartDate;
+    
+    }
+    // Update the date initially and then set an interval to update it every second
+
+    updateLiveDate();
+    setInterval(updateLiveDate, 168 * 60 * 60 * 1000);
+
+</script>
+   
 
 <main> 
 
@@ -68,13 +94,16 @@
             <option value="Z-A">Z-A</option>
             </select>
         </p>
-        <ul>
-            <li >Reem<img src="Pic/Girl.png" alt="girl" width="50" height="50"></li>
-            <li >Waleed<img src="Pic/boy.png" alt="girl" width="50" height="50"></li>
-            <li >Abdulaziz<img src="Pic/boy.png" alt="girl" width="50" height="50"></li>
-            <li >Salman<img src="Pic/boy.png" alt="girl" width="50" height="50"></li>
-            <li >Layan<img src="Pic/Girl.png" alt="girl" width="50" height="50"></li>
-            <li >Mohmmed<img src="Pic/boy.png" alt="girl" width="50" height="50"></li>
+        <ul style="list-style-type: none;">
+            <li > <img src="Pic/Girl.png" alt="girl" width="50" height="50">Reem</li>
+            <li >  <img src="Pic/boy.png" alt="girl" width="50" height="50">Waleed </li>
+            <li >  <img src="Pic/boy.png" alt="girl" width="50" height="50">Abdulaziz</li>
+            <li >  <img src="Pic/boy.png" alt="girl" width="50" height="50">Salman </li>
+            <li><img src="Pic/Girl.png" alt="girl" width="50" height="50">Layan</li>
+            <li >  <img src="Pic/boy.png" alt="girl" width="50" height="50">Mohmmed </li>
+            <li><img src="Pic/Girl.png" alt="girl" width="50" height="50">Leen</li>
+            <li><img src="Pic/Girl.png" alt="girl" width="50" height="50">Aseel</li>
+
         </ul>
     </div>
 
@@ -95,7 +124,6 @@
                 <br />
                 <ul class="TC">
                     <li>Web develpment</li>
-                    <li>Java script </li>
                 </ul>
                 <br />
 
@@ -121,7 +149,6 @@
             <a href="Schedule.html"><h4>Mohmmed</h4></a>
             <br />
             <ul class="TC">
-                <li>Python</li>
                 <li>Java </li>
             </ul>
             <br />
@@ -140,44 +167,77 @@
     <hr>
     <h2> Courses </h2>
     <hr />
-
-
+<br>
+<br>
 
     <ul class=" courses" style="display:flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;">
 
+        <script>
+            function toggleText(courseId) {
+                let points = document.getElementById(`points-${courseId}`);
+                let showMoreText = document.getElementById(`moreText-${courseId}`);
+                let buttonText = document.getElementById(`textButton-${courseId}`);
+    
+                if (points.style.display === "none") {
+                    showMoreText.style.display = "none";
+                    points.style.display = "inline";
+                    buttonText.innerHTML = "Show More";
+                } else {
+                    showMoreText.style.display = "inline";
+                    points.style.display = "none";
+                    buttonText.innerHTML = "Show Less";
+                }
+            }
+        </script>
+
+
         <li>
             <article class="Course">
+                
                 <img src="Pic/Scratch.JPG" alt="Scratch" width="90" height="60">
-                <p> Scratch <br />Abeer </p>
-                <ul>
-                    <li> Reem </li>
-                    <li> lama</li>
-                    <li> Abdullah<li>
-                </ul>
-            </article><br />
+                <p> Scratch <br /> T: Abeer </p>
+                <ul class="children">
+                    <li > Reem </li>
+                    <li > lama</li>
+                    <li > Abdullah</li>
+                    <li > Maya </li>
+                    <li > Leen</li>
+                    <li > Leen</li>
+                    <li id="points-1"> </li>
+                    <li id="moreText-1"> Mazen</li>  
+                    <br>
+                    <button class="morebut" onclick="toggleText(1)" id="textButton-1">
+                        Show More</button>
+            </article>
         </li>
+        
 
         <li>
             <article class="Course">
                 <img src="pic/python.JPG" alt="python" width="90" height="60">
-                <p> Python <br /> Mohammed </p>
-                <ul class="children">
+                <p> Python <br /> T: Amani </p>
+                <ul class="children"  >
                     <li> Abdulaziz </li>
                     <li> lara</li>
                     <li> Mohmmed</li>
                     <li> Ward </li>
-                    <li> Reem</li>
-                    <li> Rayan</li>
-                   
-                </ul>
-                <a href="#" class="more-link">More</a>
+                    <li> Reem</li>  
+                    <li id="points-2"> </li>
+                    <li id="moreText-2"> Rayan</li> 
+                    <br> 
+              
+                    <button  class="morebut" onclick="toggleText(2)" id="textButton-2">
+                        Show More
+                    </button>
+            </ul>
             </article><br />
         </li>
+
 
         <li>
             <article class="Course">
                 <img src="pic/web.JPG" alt="web programming" width="90" height="60">
-                <p> web develmpemnt <br /> Nourah </p>
+                <p> web develmpemnt <br /> T: Nourah </p>
                 <ul class="children">
                     <li> Abduulah </li>
                     <li> lara </li>
@@ -190,26 +250,36 @@
         <li>
             <article class="Course">
                 <img src="pic/JS.JPG" alt="Java Script" width="90" height="60">
-                <p> java script <br /> Nourah </p>
-                <ul class="children">
-                    <li> Taraf </li>
-                    <li> Adam</li>
-                    <li> Waleed</li>
+                <p> java script <br> T:Maha </p>
+                <ul class="children" >
+                    <li > Taraf </li>
+                    <li > Adam</li>
+                    <li > Waleed</li>
+                    <li > leen </li>
+                    <li > Mohmmed</li>
+                    <li id="points-3"> </li>
+                    <li id="moreText-3"> Salman</li>
+                    <br>
+                    <button class="morebut" onclick="toggleText(3)" id="textButton-3">
+                        Show More
+                    </button>
+                   
 
                 </ul>
-            </article><br />
+            </article><br>
         </li>
 
         <li>
             <article class="Course">
                 <img src="pic/SQL.JPG" alt="SQL" width="90" height="60">
-                <p> SQL <br /> Rehab </p>
+                <p> SQL <br /> T: Rehab </p>
                 <ul class="children">
                     <li> Abdulaziz </li>
                     <li> Ghada </li>
                     <li> Lama </li>
                     <li> Mohmmed</li>
-                    <li> Salman </li>
+                
+                  
 
                 </ul>
             </article><br />
@@ -218,18 +288,22 @@
         <li>
             <article class="Course">
                 <img src="pic/java.JPG" alt="java" width="90" height="60">
-                <p> Java <br /> Mohmmed </p>
+                <p> Java <br />T:  Mohammed </p>
                 <ul class="children">
                     <li> Aseel </li>
                     <li> Layan</li>
+                    <li> Salman </li>
 
                 </ul>
             </article><br />
         </li>
-    </ul>
+    </ul> 
 
     <hr>
 </main>
+
+
+</body>
     <footer>
         <div class="footer-content">
             <h3>Contact Us</h3>
@@ -243,7 +317,7 @@
    
     </footer>
 
-</body>
+
 
 </html>
 
