@@ -37,8 +37,8 @@
 
     <main>
         <div id="parentDashboard" class="content-to-update"></div>
-
-        <nav>
+<br>
+        <nav style="text-align: left">
             <a href="index.html">Home</a> / <a href="parent.html">Parent</a>
         </nav>
 
@@ -123,11 +123,7 @@
             // Retrieve child's name from local storage
             var childName = localStorage.getItem('childName');
 
-            // Update the parent dashboard element with the child's name
-            var parentDashboardElement = document.getElementById('parentDashboard');
-            if (parentDashboardElement && childName) {
-                parentDashboardElement.textContent = "Welcome, " + childName + "!";
-            }
+            
 
             function displayChildren(childrenArray) {
                 var kidsList = document.getElementById("kidsList");
