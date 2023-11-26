@@ -11,37 +11,86 @@
     
     <script src="scripts.js"></script>
 </head>
-
+ 
+</head>
 <header>
-        <div id="navbar">
-         
-            <div id="navbar-right">
-                  <nav id="navbar-right">
-                   <img style="margin-top:0; margin: left 0; " src="imageH/logo.jpg" 
-                        alt="TechKiddo logo"  width="100" height="100" >
-                 
-                    <ul class="nav-list">
-                      
-                       <li><a href ="index.html">Home</a></li>
-                       <li><a href ="Courses.html">Courses</a></li>
-                       <li><a href ="Toutors.html">Toutors</a></li>
-                       <li><a href ="Admin.html">Administrator</a></li>
-                       <li><a href ="parent.html">parent</a></li>
-                       <li><a href ="Aboutus.html">AboutUs</a></li>
-    
-                    </ul>
-                    <!-- Add a button for the mobile menu -->
-                        <div class="mobile-menu-icon">&#9776;</div>
-                </nav>
-            </div>
-          </div>
-    
+    <nav id="navbar-right">
+        <img style="margin-top:0%; margin: left 0; " src="imageH/logo.jpg" 
+             alt="TechKiddo logo"  width="100" height="100" >
+      
+         <ul class="nav-list">
+           
+            <li><a href ="index.html">Home</a></li>
+            <li><a href ="Courses.html">Courses</a></li>
+            <li><a href ="Toutors.html">Toutors</a></li>
+            <li><a href ="Admin.html">Administrator</a></li>
+            <li><a href ="parent.html">parent</a></li>
+            <li><a href ="Aboutus.html">AboutUs</a></li>
+
+         </ul>
+         <!-- Add a button for the mobile menu -->
+             <div class="mobile-menu-icon"></div>
+     </nav>
 </header>
    
   <body>
+     
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+            var parentChildren = JSON.parse(localStorage.getItem("parentChildren")) || [];
+
+            if (parentChildren.length === 0) {
+                // If no children, save default children's names in local storage
+                var defaultChildren = ["Fahad", "Tala"];
+                localStorage.setItem("parentChildren", JSON.stringify(defaultChildren));
+                displayChildren(defaultChildren);
+            } else {
+                // Retrieve children's names from local storage and display them
+                displayChildren(parentChildren);
+            }
+
+            function displayChildren(childrenArray) {
+                var kidsList = document.getElementById("kidsList");
+                var listItems = kidsList.getElementsByClassName("list-color");
+
+                // Update existing list items with children's names
+                for (var i = 0; i < listItems.length; i++) {
+                    var childName = childrenArray[i] || ""; // Use an empty string if no name is available
+                    var anchor = listItems[i].querySelector("a");
+                    anchor.textContent = childName;
+                }
+            }
+        });
+
+        // parent_dashboard.js
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Other initialization code for parent dashboard
+
+    // Retrieve child's name from local storage
+    var childName = localStorage.getItem('childName');
+
+    // Update the parent dashboard element with the child's name
+    var parentDashboardElement = document.getElementById('parentDashboard');
+    if (parentDashboardElement && childName) {
+        parentDashboardElement.textContent = "Welcome, " + childName + "!";
+    }
+});
+    </script>
+
+
+
     <main>
-        <div class="hero-image"></div>
+
+        <div id="parentDashboard" class="content-to-update">
+           
+        </div>
+
+
        
+        <nav>
+            <a href="index.html">Home</a> / <a href="parent.html">Parent</a>
+        </nav>
         <div class="content-container">
             <section id="children-list">
                 <div class="list-container">
@@ -66,6 +115,8 @@
                     </ul>
                 </div>
             </section>
+
+            
             
             <section id="dashboard-links">
 			    
@@ -99,6 +150,8 @@
         </div>
     </main>
     <hr>
+
+
     <footer>
         <div class="footer-content">
             <h3>Contact Us</h3>
@@ -108,51 +161,6 @@
             <p><em>©2023 TechKiddo</em></p>
         </div>
     </footer>
-
-    <script>
-          document.addEventListener('DOMContentLoaded', function() {
-            var parentChildren = JSON.parse(localStorage.getItem("parentChildren")) || [];
-
-            if (parentChildren.length === 0) {
-                // If no children, save default children's names in local storage
-                var defaultChildren = ["Fahad", "Tala"];
-                localStorage.setItem("parentChildren", JSON.stringify(defaultChildren));
-                displayChildren(defaultChildren);
-            } else {
-                // Retrieve children's names from local storage and display them
-                displayChildren(parentChildren);
-            }
-
-            function displayChildren(childrenArray) {
-                var kidsList = document.getElementById("kidsList");
-
-                // Clear existing list items
-                kidsList.innerHTML = "";
-
-                // Iterate through the childrenArray and add names to the list
-                childrenArray.forEach(function(childName) {
-                    var li = document.createElement("li");
-                    li.classList.add("list-color");
-                    li.innerHTML = '<img src="image/default-image.jpg" alt="Child Image" width="40">' +
-                                   '<a href="#">' + childName + '</a>';
-                    kidsList.appendChild(li);
-                });
-            }
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-    // Other initialization code for parent dashboard
-
-    // Retrieve child's name from local storage
-    var childName = localStorage.getItem('childName');
-
-    // Update the parent dashboard element with the child's name
-    var parentDashboardElement = document.getElementById('parentDashboard');
-    if (parentDashboardElement && childName) {
-        parentDashboardElement.textContent = "Welcome, " + childName + "!";
-    }
-});
-    </script>
 </body>
 </html>
 
