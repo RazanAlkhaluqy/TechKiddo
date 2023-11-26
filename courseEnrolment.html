@@ -11,9 +11,12 @@
     <link rel="stylesheet" href="theme2.css" disabled>
     
     <script src="scripts.js"></script>
+    <script src="courseEnrollment.js"></script>
+
 </head>
 <body>
-  
+    <div id="courseEnrollment" class="content-to-update"></div> 
+
         <header>
             <nav>
                 <div id="navbar">
@@ -39,7 +42,7 @@
         </nav>
         <section id="course-enrollment-form">
             <h2 class="fontt"><strong>Choose your kid:</strong></h2>
-            <form action="parent.html" method="get">
+            <form id="enrollment-form" action="parent.html" method="get">
                 <div class="form-group1-kid">
                     <div class="select-wrapper-kid">
                         <select id="kid-select" name="kid">
@@ -122,6 +125,8 @@
                 <button class="button2" onclick="showAlert()"><span class="fontt">Submit</span></button>
             </form>
         </section>
+        <div id="display-info"></div>
+
     </main>
     <hr>
     <footer>
