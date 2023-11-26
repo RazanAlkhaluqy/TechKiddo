@@ -189,6 +189,10 @@
                 updateAvailableCourses();
             }
         
+
+
+
+            
             // Add event listener for form submission
             var enrollmentForm = document.getElementById("enrollment-form");
             enrollmentForm.addEventListener("submit", handleFormSubmission);
