@@ -324,7 +324,7 @@ text-transform: capitalize;
 #navbar {
 background-color: #ffffff;
 background-size: 100%;
-position: fixed;
+position: relative;
 width:100%;
 padding: 1% 1%;
 height: 25%;
