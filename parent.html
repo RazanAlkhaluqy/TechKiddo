@@ -11,6 +11,7 @@
     
     <script src="scripts.js"></script>
 </head>
+
 <header>
         <div id="navbar">
          
@@ -107,6 +108,51 @@
             <p><em>©2023 TechKiddo</em></p>
         </div>
     </footer>
+
+    <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var parentChildren = JSON.parse(localStorage.getItem("parentChildren")) || [];
+
+            if (parentChildren.length === 0) {
+                // If no children, save default children's names in local storage
+                var defaultChildren = ["Fahad", "Tala"];
+                localStorage.setItem("parentChildren", JSON.stringify(defaultChildren));
+                displayChildren(defaultChildren);
+            } else {
+                // Retrieve children's names from local storage and display them
+                displayChildren(parentChildren);
+            }
+
+            function displayChildren(childrenArray) {
+                var kidsList = document.getElementById("kidsList");
+
+                // Clear existing list items
+                kidsList.innerHTML = "";
+
+                // Iterate through the childrenArray and add names to the list
+                childrenArray.forEach(function(childName) {
+                    var li = document.createElement("li");
+                    li.classList.add("list-color");
+                    li.innerHTML = '<img src="image/default-image.jpg" alt="Child Image" width="40">' +
+                                   '<a href="#">' + childName + '</a>';
+                    kidsList.appendChild(li);
+                });
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+    // Other initialization code for parent dashboard
+
+    // Retrieve child's name from local storage
+    var childName = localStorage.getItem('childName');
+
+    // Update the parent dashboard element with the child's name
+    var parentDashboardElement = document.getElementById('parentDashboard');
+    if (parentDashboardElement && childName) {
+        parentDashboardElement.textContent = "Welcome, " + childName + "!";
+    }
+});
+    </script>
 </body>
 </html>
 
