@@ -56,18 +56,15 @@
         var formattedDate = currentDate.toLocaleDateString('en-US', options);
         document.getElementById('Date').textContent = 'Date: ' + formattedDate;
 
-        // Calculate the start date of the current week (assuming the week starts on Sunday)
         var firstDayOfWeek = new Date(currentDate);
         firstDayOfWeek.setDate(currentDate.getDate() - currentDate.getDay());
 
         var weekOptions = { weekday: 'long', month: 'long', day: 'numeric' };
         var formattedWeekStartDate = firstDayOfWeek.toLocaleDateString('en-US', weekOptions);
 
-        // Display the current week's start date
         document.getElementById('WeekStartDate').textContent = 'Current Week\'s Start Date: ' + formattedWeekStartDate;
     
     }
-    // Update the date initially and then set an interval to update it every second
 
     updateLiveDate();
     setInterval(updateLiveDate, 168 * 60 * 60 * 1000);
