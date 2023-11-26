@@ -107,20 +107,16 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Check local storage for parent's children
             var parentChildren = JSON.parse(localStorage.getItem("parentChildren")) || [];
 
             if (parentChildren.length === 0) {
-                // If no children, save default children's names in local storage
                 var defaultChildren = ["Fahad", "Tala"];
                 localStorage.setItem("parentChildren", JSON.stringify(defaultChildren));
                 displayChildren(defaultChildren);
             } else {
-                // Retrieve children's names from local storage and display them
                 displayChildren(parentChildren);
             }
 
-            // Retrieve child's name from local storage
             var childName = localStorage.getItem('childName');
 
             
@@ -129,9 +125,8 @@
                 var kidsList = document.getElementById("kidsList");
                 var listItems = kidsList.getElementsByClassName("list-color");
 
-                // Update existing list items with children's names
                 for (var i = 0; i < listItems.length; i++) {
-                    var childName = childrenArray[i] || ""; // Use an empty string if no name is available
+                    var childName = childrenArray[i] || ""; 
                     var anchor = listItems[i].querySelector("a");
                     anchor.textContent = childName;
                 }
