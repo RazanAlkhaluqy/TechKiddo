@@ -1,30 +1,61 @@
-// course_enrollment.js
-
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
     // Other initialization code for course enrollment
 
-    // Retrieve child's name from local storage
-    var childName = localStorage.getItem('childName');
-
-    // Update the course enrollment element with the child's name
-    var courseEnrollmentElement = document.getElementById('courseEnrollment');
-    if (courseEnrollmentElement && childName) {
-        courseEnrollmentElement.textContent = "Enroll for courses for " + childName;
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
     // Retrieve children's names from local storage
     var childrenNames = JSON.parse(localStorage.getItem("childrenNames")) || [];
 
     // Populate kid select options
     var kidSelect = document.getElementById("kid-select");
+
+    // Add an option for the child's name from local storage
+    var childName = localStorage.getItem('childName');
+    if (childName) {
+        var childOption = document.createElement("option");
+        childOption.value = childName;
+        childOption.textContent = childName;
+        kidSelect.appendChild(childOption);
+    }
+
+    // Add options for other children's names
     for (var i = 0; i < childrenNames.length; i++) {
         var option = document.createElement("option");
         option.value = childrenNames[i];
         option.textContent = childrenNames[i];
         kidSelect.appendChild(option);
     }
+
+});
+*/
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Other initialization code for course enrollment
+
+    // Retrieve children's names from local storage
+    var childrenNames = JSON.parse(localStorage.getItem("childrenNames")) || [];
+
+    // Populate kid select options
+    var kidSelect = document.getElementById("kid-select");
+
+    // Add an option for the child's name from local storage
+    var childName = localStorage.getItem('childName');
+    if (childName) {
+        var childOption = document.createElement("option");
+        childOption.value = childName;
+        childOption.textContent = childName;
+        kidSelect.appendChild(childOption);
+    }
+
+    // Add options for other children's names
+    for (var i = 0; i < childrenNames.length; i++) {
+        var option = document.createElement("option");
+        option.value = childrenNames[i];
+        option.textContent = childrenNames[i];
+        kidSelect.appendChild(option);
+    }
+
+
+});
+
 
     // Create a multidimensional array for courses
     var coursesArray = [
