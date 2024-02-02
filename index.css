@@ -5,6 +5,18 @@
 }
 
 
+#fot33 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 75px;
+  float: right;
+  text-align: center;
+}
+
+#fot33 img {
+  width: 3vw;
+  height:3vw; }
+  
 
 body {
   width: 100%;
